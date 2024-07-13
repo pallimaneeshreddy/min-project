@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Percentage Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Selection Percentage Predictor</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="caste">Caste:</label>
+                <select id="caste" name="caste" required>
+                    <option value="OC">OC</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BCB">BCB</option>
+                    <option value="BCC">BCC</option>
+                    <option value="BCD">BCD</option>
+                    <option value="BCE">BCE</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                    <option value="EWS">EWS</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="marks">Marks:</label>
+                <input type="number" id="marks" name="marks" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="school_type">School Type:</label>
+                <select id="school_type" name="school_type">
+                    <option value="Government">Government</option>
+                    <option value="Private">Private</option>
+                </select>
+            </div>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
